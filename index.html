@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <img src="images/wppusher-logo.svg" alt="wppusher logo" class="logo">
+        <a href="#" class="logo"><img src="images/wppusher-logo.svg" alt="wppusher logo"></a>
 
         <nav>
             <ul>
@@ -19,7 +19,7 @@
                 <li><a href="#">Learn more</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Help</a></li>
-                <li><a href="#">Account</a></li>
+                <li><a href="#"  class="account_button">Account</a></li>
             </ul>
         </nav>
     </header>
@@ -32,70 +32,81 @@
                 <form action="/" id="checkout_form" aria-labelledby="checkout form">
                     <div class="basic_info">
                         <h3><span>1</span> Your Basic Information</h3>
-                        <p>
-                            <label for="first_name">First Name</label>
-                            <input type="text" name="first_name" id="first_name" placeholder="Stanley">
-                        </p>
-                        <p>
-                            <label for="last_name">Last Name</label>
-                            <input type="text" name="last_name" id="last_name" placeholder="Azi">
-                        </p>
-                        <p>
+                        <div class="name">
+                            <p class="first_name">
+                                <label for="first_name">First Name</label>
+                                <input type="text" name="first_name" id="first_name" placeholder="Stanley">
+                            </p>
+                            <p class="last_name">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" name="last_name" id="last_name" placeholder="Azi">
+                            </p>
+                        </div>
+                        <p class="email">
                             <label for="email">E-mail</label>
                             <input type="email" name="email" id="email" placeholder="azistanley17@gmail.com">
                         </p>
                     </div>
 
-                    <div id="payment_info">
+                    <div class="payment_info">
                         <h3><span>2</span> Your Payment Information</h3>
     
-                        <p>
+                        <div>
                             <label for="card_details">Credit Card</label>
-                            <div id="card_details">
-                                <input type="number" name="card_number" id="card_number" placeholder="Card Number">
-                                <input type="number" name="card_expery_date" id="card_expery_date" placeholder="MM/YY">
-                                <input type="number" name="card_cvc" id="card_cvc" placeholder="CVC">
-                            </div>
-                        </p>
+                            <p id="card_details">
+                                <input 
+                                minlength="16" 
+                                maxlength="16" 
+                                inputmode="numeric"
+                                autocomplete="cc-number"
+                                type="text"
+                                pattern="[0-9]*"                                required
+                                name="card_number" 
+                                id="card_number" 
+                                placeholder="Card Number">
+                                <input minlength="4" maxlength="4" type="text" name="card_expery_date" id="card_expery_date" placeholder="MM/YY">
+                                <input minlength="3" maxlength="3" type="text" name="card_cvc" id="card_cvc" placeholder="CVC">
+                            </p>
+                        </div>
                     </div>
 
                     <button type="submit" class="buy_wpp">Buy WP Pusher</button>
                 </form>
 
-                <div>
-                    <p>?</p>
-                    <p>Need any help? Don’t hesitate to contact support!</p>
+                <div class="need_help">
+                    <pre>
+                        <span class="question_mark">?</span> <p><strong>Need any help?</strong> <span>Don’t hesitate to <a href="#" class="contact">contact          </a></span><br>support!</p>
+                    </pre>
+                    <img src="/images/powered_by_stripe.svg" alt="powered by stripe">
                 </div>
-
-                <img src="/images/powered_by_stripe.svg" alt="powered by stripe">
             </div>
 
             <div class="plan_decription" aria-label="plan description">
-                <div>
-                    <h3>Freelancer</h3>
-                    <p><sup>$</sup>99 <sub>/ year</sub></p>
+                <div class="first_child">
+                    <h4>Freelancer</h4>
+                    <p class="price_tag"><sup>$</sup>99 <sub>/ year</sub></p>
                     <p>Automatically renews after 1 year</p>
                 </div>
 
-                <div>
-                    <p><img src="/images/Combined Shape.png" alt="check icon"> Use on 5 client sites</p>
-                    <p><img src="/images/Combined Shape.png" alt="check icon"> Private repositories</p>
-                    <p><img src="/images/Combined Shape.png" alt="check icon"> Email support</p>
+                <div class="second_child">
+                    <p><img src="/images/check_icon.png" alt="check icon"> Use on 5 client sites</p>
+                    <p><img src="/images/check_icon.png" alt="check icon"> Private repositories</p>
+                    <p><img src="/images/check_icon.png" alt="check icon"> Email support</p>
                 </div>
 
-                <p>Need 20 client sites? <br> <a href="#">Switch to the Agency plan.</a></p>
+                <p class="third_child">Need 20 client sites? <br> <a href="#"><strong>Switch to the Agency plan.</strong></a></p>
 
-                <div>
+                <div class="fourth_child">
                     <p>FTP is horrible to deal with. <strong>WP Pusher</strong> solves that issue, and the customer support is awesome!</p>
 
                     <div>
-                        <img src="/images/Bitmap_kirk_b.svg" alt="Kirk Beard">
+                        <img src="/images/kirk_b.svg" alt="Kirk Beard">
                         <p>Kirk Beard</p>
                     </div>
                 </div>
             </div>
 
-            <p class="terms_of_use">&copy; 2018 WP Pusher IVS  ·  Terms of Service</p>
+            <p class="terms_of_use">&copy; 2018 WP Pusher IVS  ·  <a href="#">Terms of Service</a></p>
         </section>
     </main>
 </body>
