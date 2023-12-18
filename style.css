@@ -352,13 +352,11 @@ main {
 }
 
 .plan_decription .third_child {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
+    /* display: block; */
     font-size: 1rem;
     border-bottom: 3px solid #b9f4ffd1;
     width: max-content;
+    line-height: 2rem;
 
     a {
         color: #FFFFFF;
