@@ -35,16 +35,16 @@
                         <div class="name">
                             <p class="first_name">
                                 <label for="first_name">First Name</label>
-                                <input type="text" name="first_name" id="first_name" placeholder="Stanley">
+                                <input type="text" name="first_name" id="first_name" placeholder="Stanley" required>
                             </p>
                             <p class="last_name">
                                 <label for="last_name">Last Name</label>
-                                <input type="text" name="last_name" id="last_name" placeholder="Azi">
+                                <input type="text" name="last_name" id="last_name" placeholder="Azi" required>
                             </p>
                         </div>
                         <p class="email">
                             <label for="email">E-mail</label>
-                            <input type="email" name="email" id="email" placeholder="azistanley17@gmail.com">
+                            <input type="email" name="email" id="email" placeholder="azistanley17@gmail.com" required>
                         </p>
                     </div>
 
@@ -60,12 +60,13 @@
                                 inputmode="numeric"
                                 autocomplete="cc-number"
                                 type="text"
-                                pattern="[0-9]*"                                required
+                                pattern="[0-9]*"
+                                required
                                 name="card_number" 
                                 id="card_number" 
                                 placeholder="Card Number">
-                                <input minlength="4" maxlength="4" type="text" name="card_expery_date" id="card_expery_date" placeholder="MM/YY">
-                                <input minlength="3" maxlength="3" type="text" name="card_cvc" id="card_cvc" placeholder="CVC">
+                                <input minlength="4" maxlength="4" type="text" name="card_expery_date" id="card_expery_date" placeholder="MM/YY" required>
+                                <input minlength="3" maxlength="3" type="text" name="card_cvc" id="card_cvc" placeholder="CVC" required>
                             </p>
                         </div>
                     </div>
